@@ -2,6 +2,46 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "aigc_train":  {
+    "file_name": "oss_genimage_image_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "aigc_eval":  {
+    "file_name": "oss_genimage_image_val.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "fakeclue_train":  {
+    "file_name": "oss_fakeclue_image_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "fakeclue_eval":  {
+    "file_name": "oss_fakeclue_image_val.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "chameleon": {
+    "file_name": "oss_chameleon_test.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
