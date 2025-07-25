@@ -34,8 +34,40 @@
       "images": "images"
     }
   },
+  "fakeclue_exp_train":  {
+    "file_name": "oss_fakeclue_image_exp_train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "fakeclue_exp_eval":  {
+    "file_name": "oss_fakeclue_image_exp_val.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
   "chameleon": {
     "file_name": "oss_chameleon_test.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "loki": {
+    "file_name": "oss_loki_test.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+    }
+  },
+  "loki_exp": {
+    "file_name": "oss_loki_exp_test.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "conversations",
