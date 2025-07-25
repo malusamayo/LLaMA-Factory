@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --job-name=aigc_finetune_test
+#SBATCH --job-name=aigc_finetune
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=300G
@@ -35,10 +35,18 @@ printenv
 #     --rdzv_id $SLURM_JOB_ID \
 #     ./src/train.py examples/train_full/qwen2_5vl_3b_full_sft.yaml
 
+# srun torchrun \
+#     --nnodes $SLURM_NNODES \
+#     --nproc-per-node $SLURM_GPUS_PER_NODE \
+#     --rdzv-backend c10d \
+#     --rdzv-endpoint $head_node_ip:$port \
+#     --rdzv_id $SLURM_JOB_ID \
+#     ./src/train.py examples/train_full/gemma-3-4b-it_full_sft.yaml
+
 srun torchrun \
     --nnodes $SLURM_NNODES \
     --nproc-per-node $SLURM_GPUS_PER_NODE \
     --rdzv-backend c10d \
     --rdzv-endpoint $head_node_ip:$port \
     --rdzv_id $SLURM_JOB_ID \
-    ./src/train.py examples/train_full/gemma-3-4b-it_full_sft.yaml
+    ./src/train.py examples/train_full/llama3_11b_full_sft.yaml

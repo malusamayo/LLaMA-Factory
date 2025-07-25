@@ -59,7 +59,7 @@ def main(args):
 
     outputs = []
     for start_idx in tqdm(range(0, len(messages), batch_size)):
-        outputs += pipe(text=messages[start_idx: start_idx+batch_size], max_new_tokens=10)
+        outputs += pipe(text=messages[start_idx: start_idx+batch_size], max_new_tokens=512)
     
     all_prompts = [
         line['conversations'][0]['value']
